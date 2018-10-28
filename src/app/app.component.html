@@ -1,0 +1,29 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+<div>
+  <h4 style="margin-left: 20%;">PRODUCTS FORM</h4>
+</div>
+<form method="POST" enctype="multipart/form-data" modelAttribute="fileBucket" (ngSubmit)="upload()" #frmUp="ngForm" action="">
+  <div style="margin-left: 25%" class="form-control">
+    <p>
+      <input type="file" name="file" multiple="multiple"  #fileInput>
+    </p>
+    <p>
+      <input type="text" class="text" name="productName" [(ngModel)]="selectedProduct.name" placeholder="Product Name">
+    </p>
+    <p>
+      <input type="text" class="text" name="description" [(ngModel)]="selectedProduct.description" placeholder="Description">
+    </p>
+    <p>
+      <input type="text" class="text" name="price" [(ngModel)]="selectedProduct.price" placeholder="Product Price">
+    </p>
+    <P>
+      <button class="button">SAVE PPRODUCT</button>&nbsp;&nbsp;&nbsp;&nbsp;
+      <button class="button">CANCEL</button>
+    </P>
+  </div>
+</form>
